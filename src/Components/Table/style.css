@@ -1,0 +1,68 @@
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
+}
+
+.sort-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.sort-control button .controls {
+  display: flex;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: flex-end;
+}
+
+.filter-control {
+  display: flex;
+  align-items: flex-end;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+button {
+  height: 50%;
+}
+
+select {
+  padding: 2px;
+}
+
+.table-container {
+}
+
+.popup {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}

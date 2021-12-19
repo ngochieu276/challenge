@@ -5,6 +5,7 @@ import axios from "axios";
 import Spinner from "./Components/UI/Spinner";
 import Table from "./Components/Table/index";
 import Pagination from "./Components/Pagination/index";
+import { ExportToExcel } from "./Components/ExportToExel/index.js";
 
 function App() {
   const pageNumber = 1;
@@ -14,6 +15,7 @@ function App() {
 
   const [page, setPage] = useState(pageNumber);
   const [pages, setPages] = useState(1);
+  const fileName = "myfile";
 
   const fetchData = async () => {
     const res = await axios.post(
@@ -103,6 +105,7 @@ function App() {
   return (
     <div className='App'>
       <Pagination page={page} pages={pages} changePage={setPage} />
+      <ExportToExcel apiData={data} fileName={fileName} />
       <Table data={data} getSort={getSort} getFilter={getFilter} />
     </div>
   );
